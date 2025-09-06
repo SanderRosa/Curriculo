@@ -1,7 +1,6 @@
 # SanderCardosodaRosa.github.io
 Curriculo
 
-Currículo - Sander Cardoso da Rosa
 Este é o meu currículo profissional, desenvolvido como uma página web estática para ser facilmente acessada e compartilhada online. Ele foi projetado para ser um complemento ao meu perfil profissional e acadêmico, destacando minhas experiências, habilidades e projetos.
 
 Sobre o Projeto
