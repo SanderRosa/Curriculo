@@ -1,391 +1,391 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sander Cardoso da Rosa — Currículo</title>
-  <meta name="description" content="Currículo online de Sander Cardoso da Rosa — Estudante de Engenharia de Controle e Automação (UERGS)">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --accent:#39ff14; /* Verde neon */
-      --muted:#a9a9a9; /* Cinza claro */
-      --bg:#000000; /* Preto */
-      --card:#111111; /* Cinza muito escuro */
-      --maxw:900px;
-      --text:#ffffff; /* Branco */
-      --skill-bg: #222222; /* Cinza escuro sutil */
-      --star-filled: #39ff14;
-      --star-empty: #444444;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: 'Fira Code', monospace;
-      line-height:1.6;
-      margin:24px;
-      background:var(--bg);
-      color:var(--text);
-    }
-    .container{
-      max-width:var(--maxw);
-      margin:0 auto;
-    }
-    .card{
-      background:var(--card);
-      border-radius:12px;
-      padding:28px;
-      box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
-    }
-    header{
-      display:flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .profile-picture-container {
-      width: 86px;
-      height: 86px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
-      flex-shrink: 0;
-    }
-    .profile-picture {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .contact {
-      text-align: right;
-      margin-top: 10px;
-    }
-    .contact-links {
-      display: flex;
-      gap: 10px;
-      justify-content: flex-end;
-      margin-top: 6px;
-    }
-    .contact-links a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-      display: flex;
-      align-items: center;
-    }
-    .contact-links a:hover {
-      color: var(--text);
-    }
-    .contact-links a .icon {
-      fill: var(--accent);
-      width: 20px;
-      height: 20px;
-      transition: fill 0.3s ease-in-out;
-    }
-    .contact-links a:hover .icon {
-      fill: var(--text);
-    }
-    h1{
-      font-size:26px;
-      margin:0;
-      color:var(--text);
-      text-shadow: 0 0 2px var(--accent);
-    }
-    .subtitle{
-      color:var(--muted);
-      font-size:13px;
-    }
-    .small{
-      color:var(--muted);
-      font-size:12px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 320px;
-      gap:20px;
-      margin-top:22px;
-    }
-    .section{
-      margin-bottom:18px;
-    }
-    h2{
-      font-size:16px;
-      margin:0 0 8px 0;
-      color:var(--accent);
-      text-shadow: 0 0 2px var(--accent);
-    }
-    ul{
-      margin:8px 0 0 0;
-      padding-left:18px;
-      color: var(--muted);
-    }
-    li{
-      margin-bottom:6px;
-    }
-    .skills-list{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-    .skill{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      background:var(--skill-bg);
-      padding:6px 10px;
-      border-radius:6px;
-      border: 1px solid var(--accent);
-      box-shadow: 0 0 3px rgba(57, 255, 20, 0.2);
-      transition: all 0.3s ease-in-out;
-    }
-    .skill:hover {
-      box-shadow: 0 0 8px var(--accent);
-      transform: translateY(-2px);
-    }
-    .skill-name{
-      font-weight:600;
-      color:var(--text);
-    }
-    .stars{
-      color: var(--star-filled);
-      font-size: 14px;
-    }
-    .star-empty{
-      color: var(--star-empty);
-    }
-    hr {
-      border: 0;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(57, 255, 20, 0), rgba(57, 255, 20, 0.75), rgba(57, 255, 20, 0));
-      margin: 20px 0;
-    }
-    footer{
-      margin-top:18px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr;}
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .contact{
-        text-align: center;
-      }
-      .contact-links {
-        justify-content: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sander Cardoso da Rosa — Currículo</title>
+    <meta name="description" content="Currículo online de Sander Cardoso da Rosa — Estudante de Engenharia de Controle e Automação (UERGS)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --accent:#39ff14; /* Verde neon */
+            --muted:#a9a9a9; /* Cinza claro */
+            --bg:#000000; /* Preto */
+            --card:#111111; /* Cinza muito escuro */
+            --maxw:900px;
+            --text:#ffffff; /* Branco */
+            --skill-bg: #222222; /* Cinza escuro sutil */
+            --star-filled: #39ff14;
+            --star-empty: #444444;
+        }
+        *{box-sizing:border-box}
+        body{
+            font-family: 'Fira Code', monospace;
+            line-height:1.6;
+            margin:24px;
+            background:var(--bg);
+            color:var(--text);
+        }
+        .container{
+            max-width:var(--maxw);
+            margin:0 auto;
+        }
+        .card{
+            background:var(--card);
+            border-radius:12px;
+            padding:28px;
+            box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .profile-picture-container {
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+            flex-shrink: 0;
+        }
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contact {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .contact-links {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 6px;
+        }
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+        }
+        .contact-links a:hover {
+            color: var(--text);
+        }
+        .contact-links a .icon {
+            fill: var(--accent);
+            width: 20px;
+            height: 20px;
+            transition: fill 0.3s ease-in-out;
+        }
+        .contact-links a:hover .icon {
+            fill: var(--text);
+        }
+        h1{
+            font-size:26px;
+            margin:0;
+            color:var(--text);
+            text-shadow: 0 0 2px var(--accent);
+        }
+        .subtitle{
+            color:var(--muted);
+            font-size:13px;
+        }
+        .small{
+            color:var(--muted);
+            font-size:12px;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 320px;
+            gap:20px;
+            margin-top:22px;
+        }
+        .section{
+            margin-bottom:18px;
+        }
+        h2{
+            font-size:16px;
+            margin:0 0 8px 0;
+            color:var(--accent);
+            text-shadow: 0 0 2px var(--accent);
+        }
+        ul{
+            margin:8px 0 0 0;
+            padding-left:18px;
+            color: var(--muted);
+        }
+        li{
+            margin-bottom:6px;
+        }
+        .skills-list{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+        .skill{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            background:var(--skill-bg);
+            padding:6px 10px;
+            border-radius:6px;
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 3px rgba(57, 255, 20, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .skill:hover {
+            box-shadow: 0 0 8px var(--accent);
+            transform: translateY(-2px);
+        }
+        .skill-name{
+            font-weight:600;
+            color:var(--text);
+        }
+        .stars{
+            color: var(--star-filled);
+            font-size: 14px;
+        }
+        .star-empty{
+            color: var(--star-empty);
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(57, 255, 20, 0), rgba(57, 255, 20, 0.75), rgba(57, 255, 20, 0));
+            margin: 20px 0;
+        }
+        footer{
+            margin-top:18px;
+            text-align:center;
+            color:var(--muted);
+            font-size:13px;
+        }
+        @media (max-width:880px){
+            .grid{grid-template-columns:1fr;}
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact{
+                text-align: center;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="card">
-    <header>
-      <div class="header-content">
-        <div class="profile-picture-container">
-          <img src="https://lh3.googleusercontent.com/a/ACg8ocJZqM4NvbTxTiudWdcMK16PmQzewPCwB440-hjuVsF1EM9uSXo=s288-c-no" alt="Foto de perfil" class="profile-picture">
+    <div class="container">
+        <div class="card">
+            <header>
+                <div class="header-content">
+                    <div class="profile-picture-container">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocJZqM4NvbTxTiudWdcMK16PmQzewPCwB440-hjuVsF1EM9uSXo=s288-c-no" alt="Foto de perfil" class="profile-picture">
+                    </div>
+                    <div>
+                        <h1>Sander Cardoso da Rosa</h1>
+                        <div class="subtitle">Estudante de Engenharia de Controle e Automação — UERGS</div>
+                        <div class="small">Interesses: Automação, IoT, Programação, Visão Computacional</div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div><strong>rosasandercardoso@gmail.com</strong></div>
+                    <div class="small">(51) 98954-3839 — Porto Alegre, RS</div>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/sander-cardoso-rosa-591632338" target="_blank">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        
+                        <a href="https://github.com/SanderRosa" target="_blank">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.819-.204.819-.456 0-.226-.008-.823-.01-1.399-3.339.723-4.043-1.609-4.043-1.609-.547-1.386-1.334-1.754-1.334-1.754-1.09-.744.082-.73.082-.73 1.205.084 1.838 1.234 1.838 1.234 1.07 1.835 2.809 1.305 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.331-5.466-5.931 0-1.31.468-2.381 1.236-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.876.117 3.176.77.839 1.233 1.91 1.233 3.22 0 4.61-2.806 5.624-5.476 5.922.43.37.817 1.102.817 2.221 0 1.606-.015 2.899-.015 3.286 0 .254.212.56.827.455c4.769-1.587 8.204-6.085 8.204-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <hr>
+            <main class="grid">
+                <section>
+                    <div class="section">
+                        <h2>Objetivo Profissional</h2>
+                        <p class="small">Estágio em <strong>Engenharia de Controle e Automação</strong>, com foco em programação, eletrônica, automação industrial, IoT e visão computacional.</p>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Formação Acadêmica</h2>
+                        <div class="small"><strong>Engenharia de Controle e Automação</strong> — UERGS (2024/2 – atual)</div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Experiência Profissional</h2>
+                        <div class="project">
+                            <strong>Auxiliar de Engenharia — Investe Uniformes e EPI’s (2021–2022)</strong>
+                            <ul class="small">
+                                <li>Apoio direto a engenheiros na elaboração de <strong>desenhos técnicos</strong>.</li>
+                                <li>Colaboração no desenvolvimento de <strong>produtos sob medida</strong>, com foco em precisão e qualidade.</li>
+                                <li>Preparação de materiais e relatórios técnicos para apresentação a clientes.</li>
+                                <li>Participação no controle de qualidade e ajustes de processo de produção.</li>
+                                <li>Experiência prática com ferramentas CAD e interpretação de desenhos técnicos.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <strong>Atendente — A Bayadeira Gráfica Expressa (2018–2019)</strong>
+                            <ul class="small">
+                                <li>Atendimento ao cliente</li>
+                                <li>Edição de imagens para impressão</li>
+                                <li>Garantia de qualidade</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <strong>Auxiliar de Encadernação — MI24 Impressões Digitais (2016–2018)</strong>
+                            <ul class="small">
+                                <li>Operação de acabamento gráfico</li>
+                                <li>Preparação de materiais</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Projetos Pessoais</h2>
+                        <div class="project">
+                            <strong>Semaforo Inteligente</strong>
+                            <div class="small">
+                                <p>Um sistema de simulação de tráfego que ajusta o tempo de verde com base na quantidade de carros. Desenvolvido em <strong>Linguagem C</strong>, o projeto utiliza estruturas de dados e lógica de programação para otimizar o fluxo de veículos em vias de trânsito.</p>
+                                <p><strong>Tecnologias:</strong> Linguagem C</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <strong>Visão Computacional - Contador de Ovos de C. elegans</strong>
+                            <div class="small">
+                                <p>Um projeto em <strong>Python</strong> que usa as bibliotecas <strong>OpenCV</strong> e <strong>Matplotlib</strong> para processar imagens, detectar e contar ovos de <i>C. elegans</i> com precisão. O sistema isola os ovos do fundo e de outras imperfeições, exibindo os resultados em gráficos.</p>
+                                <p><strong>Tecnologias:</strong> Python, OpenCV, Matplotlib</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <strong>Circuito Lógico Digital</strong>
+                            <div class="small">
+                                <p>Simulação e projeto de um circuito lógico digital usando o software <strong>Logisim Evolution</strong>. O circuito é uma máquina de estados finita que exibe o sobrenome "Rosa" em um display de 4 dígitos de 7 segmentos, com um efeito de rolagem contínua.</p>
+                                <p><strong>Tecnologias:</strong> Logisim Evolution, Lógica Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Voluntariado</h2>
+                        <div class="small"><strong>UERGS de mãos dadas com RS</strong> — Apoio a vítimas das enchentes (2024).</div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Componentes já concluídos</h2>
+                        <ul class="small">
+                            <li>Algoritmos e Programação</li>
+                            <li>Álgebra Linear e Geometria Analítica</li>
+                            <li>Cálculo 1 e Cálculo 2</li>
+                            <li>Desenho Técnico 1 e Desenho 2 CAD</li>
+                            <li>Eletrônica Digital</li>
+                            <li>Equações Diferenciais</li>
+                            <li>Física 1-Mecânica</li>
+                            <li>Metodologia Científica</li>
+                            <li>Metrologia</li>
+                            <li>Métodos Numéricos</li>
+                            <li>Programação em Função</li>
+                            <li>Química Geral</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Disciplinas em Andamento</h2>
+                        <ul class="small">
+                            <li>Confiabilidade</li>
+                            <li>Economia para Engenharia</li>
+                            <li>Estrutura de Dados</li>
+                            <li>Programação Orientada a Objeto</li>
+                            <li>Probabilidade e Estatística</li>
+                        </ul>
+                    </div>
+                </section>
+                <aside>
+                    <div class="section">
+                        <h2>Habilidades</h2>
+                        <div class="skills-list">
+                            <div class="skill">
+                                <span class="skill-name">Python</span>
+                                <span class="stars">★<span class="star-empty">★★★★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">C</span>
+                                <span class="stars">★<span class="star-empty">★★★★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">HTML</span>
+                                <span class="stars">★★<span class="star-empty">★★★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Logisim</span>
+                                <span class="stars">★★<span class="star-empty">★★★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">AutoCAD / FreeCAD</span>
+                                <span class="stars">★★★<span class="star-empty">★★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Corel Draw</span>
+                                <span class="stars">★★★★<span class="star-empty">★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Pacote Office</span>
+                                <span class="stars">★★★★<span class="star-empty">★</span></span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Inglês</span>
+                                <span class="stars">★★<span class="star-empty">★★★</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="section">
+                        <h2>Soft Skills</h2>
+                        <div class="skills-list">
+                            <div class="skill">
+                                <span class="skill-name">Trabalho em Equipe</span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Comunicação</span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Proatividade</span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Organização</span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Resolução de Problemas</span>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Adaptabilidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </main>
+            <hr>
+            <footer>
+                Atualizado em Setembro de 2025 — Criado para fins de candidatura a estágio em Engenharia de Controle e Automação
+            </footer>
         </div>
-        <div>
-          <h1>Sander Cardoso da Rosa</h1>
-          <div class="subtitle">Estudante de Engenharia de Controle e Automação — UERGS</div>
-          <div class="small">Interesses: Automação, IoT, Programação, Visão Computacional</div>
-        </div>
-      </div>
-      <div class="contact">
-        <div><strong>rosasandercardoso@gmail.com</strong></div>
-        <div class="small">(51) 98954-3839 — Porto Alegre, RS</div>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/sander-cardoso-rosa-591632338" target="_blank">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-
-          <a href="https://github.com/SanderRosa" target="_blank">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.819-.204.819-.456 0-.226-.008-.823-.01-1.399-3.339.723-4.043-1.609-4.043-1.609-.547-1.386-1.334-1.754-1.334-1.754-1.09-.744.082-.73.082-.73 1.205.084 1.838 1.234 1.838 1.234 1.07 1.835 2.809 1.305 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.331-5.466-5.931 0-1.31.468-2.381 1.236-3.22-.124-.3-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.876.117 3.176.77.839 1.233 1.91 1.233 3.22 0 4.61-2.806 5.624-5.476 5.922.43.37.817 1.102.817 2.221 0 1.606-.015 2.899-.015 3.286 0 .254.212.56.827.455c4.769-1.587 8.204-6.085 8.204-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-        </div>
-      </div>
-    </header>
-    <hr>
-    <main class="grid">
-      <section>
-        <div class="section">
-          <h2>Objetivo Profissional</h2>
-          <p class="small">Estágio em <strong>Engenharia de Controle e Automação</strong>, com foco em programação, eletrônica, automação industrial, IoT e visão computacional.</p>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Formação Acadêmica</h2>
-          <div class="small"><strong>Engenharia de Controle e Automação</strong> — UERGS (2024/2 – atual)</div>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Experiência Profissional</h2>
-          <div class="project">
-            <strong>Auxiliar de Engenharia — Investe Uniformes e EPI’s (2021–2022)</strong>
-            <ul class="small">
-              <li>Apoio direto a engenheiros na elaboração de <strong>desenhos técnicos</strong>.</li>
-              <li>Colaboração no desenvolvimento de <strong>produtos sob medida</strong>, com foco em precisão e qualidade.</li>
-              <li>Preparação de materiais e relatórios técnicos para apresentação a clientes.</li>
-              <li>Participação no controle de qualidade e ajustes de processo de produção.</li>
-              <li>Experiência prática com ferramentas CAD e interpretação de desenhos técnicos.</li>
-            </ul>
-          </div>
-          <div class="project">
-            <strong>Atendente — A Bayadeira Gráfica Expressa (2018–2019)</strong>
-            <ul class="small">
-              <li>Atendimento ao cliente</li>
-              <li>Edição de imagens para impressão</li>
-              <li>Garantia de qualidade</li>
-            </ul>
-          </div>
-          <div class="project">
-            <strong>Auxiliar de Encadernação — MI24 Impressões Digitais (2016–2018)</strong>
-            <ul class="small">
-              <li>Operação de acabamento gráfico</li>
-              <li>Preparação de materiais</li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Projetos Pessoais</h2>
-          <div class="project">
-            <strong>Semaforo Inteligente</strong>
-            <div class="small">
-              <p>Um sistema de simulação de tráfego que ajusta o tempo de verde com base na quantidade de carros. Desenvolvido em <strong>Linguagem C</strong>, o projeto utiliza estruturas de dados e lógica de programação para otimizar o fluxo de veículos em vias de trânsito.</p>
-              <p><strong>Tecnologias:</strong> Linguagem C</p>
-            </div>
-          </div>
-          <div class="project">
-            <strong>Visão Computacional - Contador de Ovos de C. elegans</strong>
-            <div class="small">
-              <p>Um projeto em <strong>Python</strong> que usa as bibliotecas <strong>OpenCV</strong> e <strong>Matplotlib</strong> para processar imagens, detectar e contar ovos de <i>C. elegans</i> com precisão. O sistema isola os ovos do fundo e de outras imperfeições, exibindo os resultados em gráficos.</p>
-              <p><strong>Tecnologias:</strong> Python, OpenCV, Matplotlib</p>
-            </div>
-          </div>
-          <div class="project">
-            <strong>Circuito Lógico Digital</strong>
-            <div class="small">
-              <p>Simulação e projeto de um circuito lógico digital usando o software <strong>Logisim Evolution</strong>. O circuito é uma máquina de estados finita que exibe o sobrenome "Rosa" em um display de 4 dígitos de 7 segmentos, com um efeito de rolagem contínua.</p>
-              <p><strong>Tecnologias:</strong> Logisim Evolution, Lógica Digital</p>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Voluntariado</h2>
-          <div class="small"><strong>UERGS de mãos dadas com RS</strong> — Apoio a vítimas das enchentes (2024).</div>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Componentes já concluídos</h2>
-          <ul class="small">
-            <li>Algoritmos e Programação</li>
-            <li>Álgebra Linear e Geometria Analítica</li>
-            <li>Cálculo 1 e Cálculo 2</li>
-            <li>Desenho Técnico 1 e Desenho 2 CAD</li>
-            <li>Eletrônica Digital</li>
-            <li>Equações Diferenciais</li>
-            <li>Física 1-Mecânica</li>
-            <li>Metodologia Científica</li>
-            <li>Metrologia</li>
-            <li>Métodos Numéricos</li>
-            <li>Programação em Função</li>
-            <li>Química Geral</li>
-          </ul>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Disciplinas em Andamento</h2>
-          <ul class="small">
-            <li>Confiabilidade</li>
-            <li>Economia para Engenharia</li>
-            <li>Estrutura de Dados</li>
-            <li>Programação Orientada a Objeto</li>
-            <li>Probabilidade e Estatística</li>
-          </ul>
-        </div>
-      </section>
-      <aside>
-        <div class="section">
-          <h2>Habilidades</h2>
-          <div class="skills-list">
-            <div class="skill">
-              <span class="skill-name">Python</span>
-              <span class="stars">★<span class="star-empty">★★★★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">C</span>
-              <span class="stars">★<span class="star-empty">★★★★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">HTML</span>
-              <span class="stars">★★<span class="star-empty">★★★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Logisim</span>
-              <span class="stars">★★<span class="star-empty">★★★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">AutoCAD / FreeCAD</span>
-              <span class="stars">★★★<span class="star-empty">★★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Corel Draw</span>
-              <span class="stars">★★★★<span class="star-empty">★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Pacote Office</span>
-              <span class="stars">★★★★<span class="star-empty">★</span></span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Inglês</span>
-              <span class="stars">★★<span class="star-empty">★★★</span></span>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="section">
-          <h2>Soft Skills</h2>
-          <div class="skills-list">
-            <div class="skill">
-              <span class="skill-name">Trabalho em Equipe</span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Comunicação</span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Proatividade</span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Organização</span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Resolução de Problemas</span>
-            </div>
-            <div class="skill">
-              <span class="skill-name">Adaptabilidade</span>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </main>
-    <hr>
-    <footer>
-      Atualizado em Setembro de 2025 — Criado para fins de candidatura a estágio em Engenharia de Controle e Automação
-    </footer>
-  </div>
-</div>
+    </div>
 </body>
 </html>
