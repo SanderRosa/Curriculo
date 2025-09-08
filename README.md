@@ -1,4 +1,5 @@
 Currículo Web
+
 Este é meu currículo, desenvolvido como um projeto pessoal para demonstrar habilidades em desenvolvimento web e destacar a experiência profissional, acadêmica e projetos. O currículo é um arquivo HTML único, projetado para ser fácil de hospedar e compartilhar.
 
 Funcionalidades
