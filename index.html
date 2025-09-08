@@ -140,15 +140,15 @@
             gap:8px;
         }
         .skill{
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
+            display: flex;
+            flex-direction: column;
             background:var(--skill-bg);
             padding:6px 10px;
             border-radius:6px;
             border: 1px solid var(--accent);
             box-shadow: 0 0 3px rgba(57, 255, 20, 0.2);
             transition: all 0.3s ease-in-out;
+            cursor: pointer;
         }
         .skill:hover {
             box-shadow: 0 0 8px var(--accent);
@@ -158,16 +158,42 @@
             font-weight:600;
             color:var(--text);
         }
+        .skill-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
         .skill-bar-container {
             width: 80px;
             height: 8px;
             background-color: var(--bar-bg);
             border-radius: 4px;
             overflow: hidden;
+            margin-left: auto;
         }
         .skill-bar-fill {
             height: 100%;
             background-color: var(--bar-fill);
+            transition: width 0.5s ease-in-out;
+        }
+        .skill-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            flex-basis: 100%;
+        }
+        .skill.is-expanded .skill-details {
+            max-height: 200px; /* Adjust as needed */
+        }
+        .skill-details ul {
+            padding-left: 20px;
+            margin-top: 8px;
+            font-size: 11px;
+        }
+        .skill-details li {
+            list-style-type: '» ';
+            margin-bottom: 2px;
         }
         hr {
             border: 0;
@@ -281,7 +307,7 @@
                         Porto Alegre, RS
                     </div>
                     <div class="small">
-                        <a href="https://wa.me/5551989543839" target="_blank" class="contact-phone-link">
+                        <a href="tel:+5551989543839" class="contact-phone-link">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.04 2.1c-5.46 0-9.91 4.45-9.91 9.91 0 1.63.41 3.22 1.2 4.62L2.01 22.9l6.59-1.73a9.85 9.85 0 0 0 4.34.93c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zm.02 1.57c4.54 0 8.34 3.63 8.34 8.11 0 4.48-3.8 8.11-8.34 8.11a8.21 8.21 0 0 1-4.3-.92l-4.22 1.1-.03-.04 1.12-4.14a8.31 8.31 0 0 1-1.3-4.13c0-4.48 3.8-8.11 8.34-8.11zm4.4 11.83c-.22-.11-.5-.18-.78-.29-.28-.1-.58-.19-.85-.29-.28-.1-.5-.1-.7-.1-.2 0-.42.06-.64.2-.23.13-.57.42-.78.5-.22.09-.43.1-.64.05s-.4-.14-.58-.23c-.17-.08-.34-.1-.5-.16-.27-.08-.5-.07-.7-.03s-.4.1-.6.2a1.8 1.8 0 0 0-.64.6c-.1.17-.2.4-.29.62s-.19.4-.2.63c-.02.2-.03.4-.04.6-.01.2-.01.3-.01.44s.07.28.1.4.15.2.27.32.22.25.3.36.19.18.28.25.19.1.3.17.28.09.4.16.29.13.43.2.35.1.5.15.42.09.57.14.3.06.45.1.3.06.58.1.34.03.5.02.24-.02.43-.07.4-.09.6-.17.65-.24.8-.3.73-.25 1.13-.5 1.54-.78.14-.07.28-.16.4-.25.12-.1.22-.2.33-.29.1-.08.2-.18.28-.27.08-.1.15-.2.23-.3a.56.56 0 0 0 .15-.22c-.06-.1-.13-.23-.19-.35s-.1-.22-.16-.32z"/></svg>
                             (51) 98954-3839
                         </a>
@@ -328,6 +354,11 @@
                                 <div class="item-detail">
                                     <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm0 2v2H4V5h16zm0 4H4v10h16V9z"/></svg>
                                     <span class="smaller-text">2021</span>
+                                </div>
+                                <!-- Link para o certificado -->
+                                <div class="item-detail">
+                                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v4h5v12H6zm8-10H8v-2h6v2z"/></svg>
+                                    <a href="https://github.com/SanderRosa/Curriculo/blob/main/certificado%20html.jpg?raw=true" target="_blank" class="smaller-text" style="color:var(--accent); text-decoration: none;">Ver Certificado</a>
                                 </div>
                             </div>
                             <p class="small">Curso básico de HTML, com foco na estruturação de páginas web, uso de tags essenciais, formatação de texto, criação de links e inserção de imagens e listas.</p>
@@ -463,64 +494,106 @@
                     <div class="section">
                         <h2>Habilidades</h2>
                         <div class="skills-list">
+                            <!-- Python Skill with collapsible content -->
+                            <div class="skill" id="python-skill">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="20"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-details">
+                                    <ul>                                
+                                        <li>OpenCV</li>
+                                        <li>NumPy</li>
+                                        <li>Scikit-learn</li>
+                                        <li>Matplotlib</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- All other skills now have the same structure -->
                             <div class="skill">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 15%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">C</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="15"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-details"></div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span class="skill-name">C++</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="15"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-details"></div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span class="skill-name">Tecnologias Web</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="20"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-details">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>JavaScript</li>
+                                        <li>CSS</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="skill">
-                                <span class="skill-name">C</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 15%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">GitHub</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="30"></div>
+                                    </div>
                                 </div>
+                                <div class="skill-details"></div>
                             </div>
                             <div class="skill">
-                                <span class="skill-name">C++</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 15%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Logisim</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="40"></div>
+                                    </div>
                                 </div>
+                                <div class="skill-details"></div>
                             </div>
                             <div class="skill">
-                                <span class="skill-name">HTML</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">CAD Softwares</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="60"></div>
+                                    </div>
                                 </div>
+                                <div class="skill-details"></div>
                             </div>
                             <div class="skill">
-                                <span class="skill-name">CSS</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Corel Draw</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="80"></div>
+                                    </div>
                                 </div>
+                                <div class="skill-details"></div>
                             </div>
                             <div class="skill">
-                                <span class="skill-name">GitHub</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Pacote Office</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="80"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="skill">
-                                <span class="skill-name">Logisim</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 40%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span class="skill-name">CAD Softwares</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 60%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span class="skill-name">Corel Draw</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span class="skill-name">Pacote Office</span>
-                                <div class="skill-bar-container">
-                                    <div class="skill-bar-fill" style="width: 80%;"></div>
+                                <div class="skill-details">
+                                    <ul>
+                                        <li>Excel</li>
+                                        <li>Word</li>
+                                        <li>PowerPoint</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -529,11 +602,11 @@
                     <div class="section">
                         <h2>Idiomas</h2>
                         <div class="skills-list">
-                            <div class="skill" style="justify-content: flex-start;">
+                            <div class="skill">
                                 <span class="skill-name">Português</span>
                                 <span style="margin-left: auto; color: var(--muted); font-weight: normal;">Nativo</span>
                             </div>
-                            <div class="skill" style="justify-content: flex-start;">
+                            <div class="skill">
                                 <span class="skill-name">Inglês</span>
                                 <span style="margin-left: auto; color: var(--muted); font-weight: normal;">Básico</span>
                             </div>
@@ -571,5 +644,25 @@
             </footer>
         </div>
     </div>
+    <script>
+        // Get all skill bar elements
+        const skillBars = document.querySelectorAll('.skill-bar-fill');
+        skillBars.forEach(bar => {
+            const level = bar.getAttribute('data-level');
+            bar.style.width = level + '%';
+        });
+
+        // Get all collapsible skill elements
+        const skillsWithDetails = document.querySelectorAll('.skill');
+
+        skillsWithDetails.forEach(skill => {
+            skill.addEventListener('click', () => {
+                const skillDetails = skill.querySelector('.skill-details');
+                if (skillDetails && skillDetails.querySelector('li')) {
+                    skill.classList.toggle('is-expanded');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
