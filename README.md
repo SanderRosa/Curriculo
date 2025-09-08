@@ -1,18 +1,28 @@
-# SanderCardosodaRosa.github.io
-Curriculo
+Currículo Web
+Este é meu currículo, desenvolvido como um projeto pessoal para demonstrar habilidades em desenvolvimento web e destacar a experiência profissional, acadêmica e projetos. O currículo é um arquivo HTML único, projetado para ser fácil de hospedar e compartilhar.
 
-Este é o meu currículo profissional, desenvolvido como uma página web estática para ser facilmente acessada e compartilhada online. Ele foi projetado para ser um complemento ao meu perfil profissional e acadêmico, destacando minhas experiências, habilidades e projetos.
+Funcionalidades
+Design Minimalista e Responsivo: O layout se adapta perfeitamente a diferentes tamanhos de tela, de desktops a dispositivos móveis.
 
-Sobre o Projeto
-O currículo é um único arquivo HTML que combina estrutura, estilo (CSS) e conteúdo, o que o torna leve e simples de hospedar. Ele é totalmente responsivo e adaptável a diferentes tamanhos de tela (desktop, tablet e mobile).
+Tema Escuro: Uma paleta de cores escuras com um toque de verde neon, inspirada em um estilo de interface de terminal.
 
-O design adota uma estética "tech", com uma paleta de cores escura e uma fonte que remete a um terminal de código, para refletir minha área de interesse em tecnologia e engenharia.
+Barras de Habilidades Dinâmicas: As barras de nível das habilidades preenchem-se automaticamente com base nos valores definidos no código.
+
+Seções Interativas: As categorias de habilidades "Python", "Tecnologias Web" e "Pacote Office" são expansíveis, revelando uma lista de tecnologias e ferramentas específicas.
 
 Tecnologias Utilizadas
-• HTML5: Para a estrutura e o conteúdo da página.
+HTML: Estrutura fundamental da página.
 
-• CSS3: Para a estilização e o design do currículo.
+CSS: Estilização e responsividade da interface.
 
-• SVG (Scalable Vector Graphics): Para os ícones das redes sociais (LinkedIn e GitHub), garantindo qualidade visual em qualquer resolução.
+JavaScript: Responsável pela interatividade das barras de habilidade e do conteúdo expansível.
 
-• Google Fonts: Para a fonte "Fira Code", que define o estilo visual do texto.
+Como Visualizar
+Basta abrir o arquivo web.html em qualquer navegador web moderno para visualizar o currículo. Não são necessárias dependências externas ou servidor web.
+
+Autor
+Sander Cardoso da Rosa
+
+
+Licença
+Este projeto é de uso pessoal e não possui uma licença formal, mas sinta-se à vontade para se inspirar e adaptá-lo para seus próprios projetos, mantendo os devidos créditos.
