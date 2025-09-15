@@ -20,15 +20,14 @@
             --star-filled: #39ff14;
             --star-empty: #444444;
             --bar-bg: #444444;
-            --bar-fill: #39ff14;
+            --bar-fill: #ccff33;
         }
         *{box-sizing:border-box}
         body{
-            font-family: 'Fira Mono', monospace;
+            font-family: 'Fira Code', monospace;
             line-height:1.6;
             margin:24px;
-            background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 50%, rgba(0, 0, 0, 1) 100%);
-            
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 50%, rgba(0, 0, 0, 1) 100%);
             color:var(--text);
         }
         .container{
@@ -39,7 +38,7 @@
             background:var(--card);
             border-radius:12px;
             padding:28px;
-            box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+            box-shadow: 0 0 5px rgba(204, 255, 51, 0.2);
         }
         header{
             display:flex;
@@ -58,7 +57,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid var(--accent);
-            box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+            box-shadow: 0 0 5px rgba(204, 255, 51, 0.2);
             flex-shrink: 0;
         }
         .profile-picture {
@@ -147,7 +146,7 @@
             padding:6px 10px;
             border-radius:6px;
             border: 1px solid var(--accent);
-            box-shadow: 0 0 3px rgba(57, 255, 20, 0.2);
+            box-shadow: 0 0 3px rgba(204, 255, 51, 0.2);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
         }
@@ -199,7 +198,7 @@
         hr {
             border: 0;
             height: 1px;
-            background-image: linear-gradient(to right, rgba(57, 255, 20, 0), rgba(57, 255, 20, 0.75), rgba(57, 255, 20, 0));
+            background-image: linear-gradient(to right, rgba(204, 255, 51, 0), rgba(204, 255, 51, 0.75), rgba(204, 255, 51, 0));
             margin: 20px 0;
         }
         footer{
@@ -364,6 +363,21 @@
                             </div>
                             <p class="small">Curso básico de HTML, com foco na estruturação de páginas web, uso de tags essenciais, formatação de texto, criação de links e inserção de imagens e listas.</p>
                         </div>
+                        <div class="course-item">
+                            <div class="small">
+                                <span class="course-title">CLP para Iniciantes — Mitsubishi Electric</span>
+                                <div class="item-detail">
+                                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm0 2v2H4V5h16zm0 4H4v10h16V9z"/></svg>
+                                    <span class="smaller-text">2025</span>
+                                </div>
+                                <!-- Link para o certificado -->
+                                <div class="item-detail">
+                                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v4h5v12H6zm8-10H8v-2h6v2z"/></svg>
+                                    <a href="https://github.com/SanderRosa/Curriculo/blob/main/clpiniciante.png?raw=true" target="_blank" class="smaller-text" style="color:var(--accent); text-decoration: none;">Ver Certificado</a>
+                                </div>
+                            </div>
+                            <p class="small">Curso focado nos conceitos fundamentais de Controladores Lógicos Programáveis (CLP), programação em ladder e noções básicas de automação industrial.</p>
+                        </div>
                     </div>
                     <hr>
                     <div class="section">
@@ -504,7 +518,7 @@
                                     </div>
                                 </div>
                                 <div class="skill-details">
-                                    <ul>                                
+                                    <ul>
                                         <li>OpenCV</li>
                                         <li>NumPy</li>
                                         <li>Scikit-learn</li>
@@ -512,7 +526,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- All other skills now have the same structure -->
                             <div class="skill">
                                 <div class="skill-header">
                                     <span class="skill-name">C</span>
@@ -527,6 +540,16 @@
                                     <span class="skill-name">C++</span>
                                     <div class="skill-bar-container">
                                         <div class="skill-bar-fill" data-level="15"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-details"></div>
+                            </div>
+                            <!-- New CLP skill -->
+                            <div class="skill" id="clp-skill">
+                                <div class="skill-header">
+                                    <span class="skill-name">CLP</span>
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar-fill" data-level="5"></div>
                                     </div>
                                 </div>
                                 <div class="skill-details"></div>
